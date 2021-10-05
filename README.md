@@ -11,7 +11,7 @@ Here is a brief overview of the main steps followed:
 - Extract sentiment from the input: using a dataset of common words associated with the corresponding sentiment. 
 - Recommend movies: given a vector of the user's preferences and given ratings by other users, use collaborative filtering to return a list of movies with the highest recommendation score that the user hasn't seen, using collaborative filtering with cosine-similarity. 
 
-## The class' content 
+## The course content
 
 - Text Processing using Regular Expressions, Text Normalization and Edit Distance
 - Langauge Modeling with N-grams
