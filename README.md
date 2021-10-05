@@ -1,5 +1,5 @@
 # NLP Projects
-This repository contains an overview of the contents I learned while auditing CS124, "From Languages to Information" at Stanford University. It also contains my code for the final project for this class, when I implemented a movie recommendation Chatbot (The code is available upon request). 
+This repository contains an overview of the content I learned while auditing CS124, "From Languages to Information" at Stanford University. It also contains my code for the final project for this class, when I implemented a movie recommendation Chatbot (The code is available upon request). 
 
 ## The MovieBot's functionalities 
 
