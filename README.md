@@ -3,7 +3,7 @@ This repository contains an overview of the content I learned while auditing CS1
 
 ## The MovieBot's functionalities 
 
-The aim is to build a chatbot somewhat similar to ELIZA [ELIZA](https://en.wikipedia.org/wiki/ELIZA), which would specifically interact with the user about his movie tastes, use sentiment analysis to extract sentiment associated with a set of movies, then recommend 10 different users accordingly. 
+The aim is to build a chatbot somewhat similar to [ELIZA](https://en.wikipedia.org/wiki/ELIZA), which would specifically interact with the user about his movie tastes, use sentiment analysis to extract sentiment associated with a set of movies, then recommend 10 different users accordingly. 
 
 Here is a brief overview of the main steps followed: 
 - Extracting movie titles: given an input text, output a list of possible movie titles that are mentionned in text. 
