@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "../repl.py", line 177, in <module>
+    repl = REPL(creative=args.creative)
+  File "../repl.py", line 56, in __init__
+    self.chatbot = Chatbot(creative=creative)
+  File "/Users/Mous/pa6-chatbot/chatbot.py", line 35, in __init__
+    self.titles, ratings = util.load_ratings('data/ratings.txt')
+  File "/Users/Mous/pa6-chatbot/util.py", line 15, in load_ratings
+    title_list = load_titles('data/movies.txt')
+  File "/Users/Mous/pa6-chatbot/util.py", line 39, in load_titles
+    with open(src_filename, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/movies.txt'
