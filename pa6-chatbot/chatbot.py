@@ -23,9 +23,7 @@ class Chatbot:
     """Simple class to implement the chatbot for PA 6."""
 
     def __init__(self, creative=False):
-        # The chatbot's default name is `moviebot`.
-        # TODO: Give your chatbot a new name.
-        self.name = "Selma's MovieBot"
+        self.name = "Salma's MovieBot"
 
         self.creative = creative
         # This matrix has the following shape: num_movies x num_users
@@ -35,17 +33,10 @@ class Chatbot:
         self.sentiment = util.load_sentiment_dictionary('data/sentiment.txt')
         self.p = PorterStemmer()
 
-        ########################################################################
-        # TODO: Binarize the movie ratings matrix.                             #
-        ########################################################################
-
         # Binarize the movie ratings before storing the binarized matrix.
         self.ratings = self.binarize(ratings, 2.5) # check if correct
         self.num_movies = np.shape(self.ratings)[0]
         self.users_ratings = np.zeros(self.num_movies)
-        ########################################################################
-        #                             END OF YOUR CODE                         #
-        ########################################################################
 
     ############################################################################
     # 1. WARM UP REPL                                                          #
@@ -53,30 +44,18 @@ class Chatbot:
 
     def greeting(self):
         """Return a message that the chatbot uses to greet the user."""
-        ########################################################################
-        # TODO: Write a short greeting message                                 #
-        ########################################################################
 
         greeting_message = "Hello. I'm Selma's MovieBot. I'll recommend a movie for you to watch. Tell me about a movie you watched."
 
-        ########################################################################
-        #                             END OF YOUR CODE                         #
-        ########################################################################
         return greeting_message
 
     def goodbye(self):
         """
         Return a message that the chatbot uses to bid farewell to the user.
         """
-        ########################################################################
-        # TODO: Write a short farewell message                                 #
-        ########################################################################
 
         goodbye_message = "I hope this was useful. Enjoy your movie and see you soon!"
-
-        ########################################################################
-        #                          END OF YOUR CODE                            #
-        ########################################################################
+        
         return goodbye_message
 
     ############################################################################
@@ -145,9 +124,6 @@ class Chatbot:
             recommendations = self.recommend(self.users_ratings, self.ratings)
             response = response + "\nYou might like these movies: " + self.recommend_for_user(recommendations)
 
-        ########################################################################
-        #                          END OF YOUR CODE                            #
-        ########################################################################
         return response
 
     def recommend_for_user(self, recommendations):
@@ -202,7 +178,7 @@ class Chatbot:
         # your implementation to do any generic preprocessing, feel free to    #
         # leave this method unmodified.                                        #
         ########################################################################
-
+        """ Not needed in my implementation """
         ########################################################################
         #                             END OF YOUR CODE                         #
         ########################################################################
@@ -509,11 +485,6 @@ class Chatbot:
 
         :returns: a binarized version of the movie-rating matrix
         """
-        ########################################################################
-        # TODO: Binarize the supplied ratings matrix.                          #
-        #                                                                      #
-        # WARNING: Do not use self.ratings directly in this function.          #
-        ########################################################################
 
         # The starter code returns a new matrix shaped like ratings but full of
         # zeros.
@@ -527,11 +498,6 @@ class Chatbot:
 
         #binarized_ratings = 2 * (ratings > threshold) - 1
 
-        # DEBUG THIS
-
-        ########################################################################
-        #                        END OF YOUR CODE                              #
-        ########################################################################
         return binarized_ratings
 
     def similarity(self, u, v):
@@ -544,16 +510,11 @@ class Chatbot:
 
         :returns: the cosine similarity between the two vectors
         """
-        ########################################################################
-        # TODO: Compute cosine similarity between the two vectors.             #
-        ########################################################################
         norm_u_v = np.sqrt(np.dot(u, u) * np.dot(v, v))
         if norm_u_v == 0:
             return 0
+        
         return np.dot(u, v) / norm_u_v
-        ########################################################################
-        #                          END OF YOUR CODE                            #
-        ########################################################################
 
 
     def recommend(self, user_ratings, ratings_matrix, k=10, creative=False):
@@ -641,9 +602,6 @@ class Chatbot:
             recommendations.append(max_movie)
             del expected_ratings[max_movie]
 
-        ########################################################################
-        #                        END OF YOUR CODE                              #
-        ########################################################################
         return recommendations
 
     ############################################################################
