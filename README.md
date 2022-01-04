@@ -3,13 +3,13 @@ This repository contains an overview of the content I learned while auditing [CS
 
 ## Final Project: MovieBot
 
-The aim is to build a chatbot somewhat similar to [ELIZA](https://en.wikipedia.org/wiki/ELIZA), which would specifically interact with the user about his movie tastes, use sentiment analysis to extract sentiment associated with a set of movies, then recommend 10 different users accordingly. 
+The aim is to build a chatbot somewhat similar to [ELIZA](https://en.wikipedia.org/wiki/ELIZA), which would specifically interact with the user about their movie tastes, use sentiment analysis to extract sentiment associated with a set of movies, then recommend 10 different users accordingly. 
 
 Here is a brief overview of the main steps followed: 
 - Extracting movie titles: given an input text, output a list of possible movie titles that are mentionned in text. 
 - Find movie associated with the title: returning a list of indices in the movies dataset corresponding to the movie titles extracted. 
 - Extract sentiment from the input: using a dataset of common words associated with the corresponding sentiment. 
-- Recommend movies: given a vector of the user's preferences and given ratings by other users, use collaborative filtering to return a list of movies with the highest recommendation score that the user hasn't seen, using collaborative filtering with cosine-similarity. 
+- Recommend movies: given a vector of the user's preferences and given ratings by other users, return a list of movies, that the user hasn't seen, with the highest recommendation score, using collaborative filtering with cosine-similarity. 
 
 ## Course content
 
